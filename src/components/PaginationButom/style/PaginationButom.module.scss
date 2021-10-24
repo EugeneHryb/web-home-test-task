@@ -29,6 +29,10 @@
     text-transform: uppercase;
     font-size: 14px;
 
+    @include small {
+        font-size: 18px;
+    }
+
     @include large {
         display: block;
     }

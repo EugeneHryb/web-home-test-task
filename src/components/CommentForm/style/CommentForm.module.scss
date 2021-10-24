@@ -1,4 +1,5 @@
 @import '../../../config/config';
+@import '../../../utils/responsive';
 
 .wrapper{
     padding: 40px 40px 20px 40px;
@@ -33,11 +34,22 @@
 
     &>input {
         width: 50%;
+
+
+        @include extra-small{
+            width: 100%;
+        }
+
     }
 
     & > textarea {
         width: 100%;
         resize: none;
+
+        @include extra-small{
+            min-height: 10em;
+        }
+
     }
 }
 

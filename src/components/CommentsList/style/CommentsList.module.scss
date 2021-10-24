@@ -1,8 +1,14 @@
+@import '../../../utils/responsive';
+
 .wraper{
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     padding: 40px;
+
+    @include extra-small{
+        padding: 5px;
+    }
 
 }
 
@@ -11,12 +17,17 @@
     justify-content: center;
     text-align: center;
 
-    &:first-child, &:last-child{
-        width: 200px;
+    @include large {
+        flex-wrap: wrap;
     }
+
 }
 
 .more{
     display: flex;
     justify-content: center;
+}
+
+.coments-list{
+    padding: 0;
 }

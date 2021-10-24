@@ -88,7 +88,7 @@ function CommentsList(){
             }
         }
         catch(eror) {
-            console.log('showMore', eror)
+            console.error('CommentsList function show more',eror)
         }
     }
 

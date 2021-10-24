@@ -1,4 +1,3 @@
-import { conditionalExpression } from "@babel/types";
 
 function dateToString(date){
     function monthNumber(num){

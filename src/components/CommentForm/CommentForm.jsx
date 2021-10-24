@@ -48,10 +48,7 @@ function CommentForm(props){
                     }
                 })
 
-                const answer = await response.json();
-
-                if(response.ok){
-                    console.log('reset',comment)                   
+                if(response.ok){                  
                     props.resetPage();
                     setComment({name: '',text: '' });
                     setShowMesage(true);
@@ -63,7 +60,7 @@ function CommentForm(props){
             }
         }
         catch(e){
-            console.log(e);
+            console.error('CommentForm function formHangler',e);
         }
 
 
