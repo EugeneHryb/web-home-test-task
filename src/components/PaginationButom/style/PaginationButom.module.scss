@@ -1,0 +1,18 @@
+@import '../../../config/config';
+
+.wraper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+
+}
+
+.button{
+    display: block;
+    padding: 10px;
+    background-color: $button-color;
+    text-decoration: none;
+    color: $button-content-color; 
+    box-shadow: 0px 0px 50px -18px $button-shadow-color;
+}

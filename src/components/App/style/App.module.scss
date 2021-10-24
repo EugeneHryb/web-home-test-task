@@ -1,0 +1,14 @@
+$col-inded: 15px;
+
+.background{
+  position: relative;
+  height: 100%;
+  width: 100%;
+  background-color: gray;
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+    padding: $col-inded / 2;
+}
