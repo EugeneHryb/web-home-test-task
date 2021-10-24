@@ -4,6 +4,7 @@ import PaginnationButom from '../PaginationButom/PaginationButom';
 import Buttom from "../Buttom/Butom";
 import styles from  './style/CommentsList.module.scss'; 
 import API from "../../API/API";
+import CommentForm from "../CommentForm/CommentForm";
 
 function CommentsList(){
 
@@ -24,6 +25,10 @@ function CommentsList(){
         }
     }
 
+    function resetPage(){
+        updatePage(thisPage)
+    }
+
     async function updatePage(url){
         try {
             setThisPage(url);
@@ -36,8 +41,6 @@ function CommentsList(){
             if(response.ok){
                 const data = await response.json();
 
-                console.log(data);
-
                 setComents(data.data);
                 setActivePage([data.current_page])
                 setPageLinks(data.links);
@@ -45,8 +48,6 @@ function CommentsList(){
                 resetButton(data)
             }
             
-             
-
         }  
         catch(eror){
             return {
@@ -80,8 +81,6 @@ function CommentsList(){
                     }
                     return element
                 })
-
-                //console.log(newPageLink)
 
                 setPageLinks(newPageLink);
                 resetButton(data)
@@ -152,13 +151,15 @@ function CommentsList(){
                 {listComents}
             </ul>
 
-            <div>
+            <div className ={styles.more} >
                 {isShowButton()}
             </div>
 
             <ul className={styles['pagination-list']}>
                 {listPaginationButon}
             </ul>
+
+            <CommentForm resetPage = {resetPage}/>
         </div>
     )
 }

@@ -1,3 +1,25 @@
-$button-color: rgb(0, 47, 255);
-$button-content-color: gold;
-$button-shadow-color: rgb(12, 11, 11);
+$default-font: Arial, Helvetica, sans-serif;
+
+//App
+
+$app-bg-color: #000000;
+$app-container-bg: #3d3d3d50;
+
+//coment
+$comment-color-text: white;
+$comment-bg-color: #9f52441e;
+
+
+
+//pagination and button
+$button-color: #FF7621;
+$button-content-color: black;
+$button-shadow-color: rgba(255, 255, 255, 0.87);
+
+
+//Pop Up
+$pop-up-bg-color: #bbbbbb2c;
+$pop-up-bg-container: #000000c4;
+$pop-up-font: $default-font;
+$pop-up-font-color: rgb(255, 255, 255);
+$pop-up-close-color: white;

@@ -8,10 +8,10 @@ function Comment(props){
     ;
 
     return(
-        <li>
-            <h3>{props.name}</h3>
-            <p>{props.text}</p>
-            <span>Updated: {dateToString(updatedTo)}</span>
+        <li className= {styles.container}>
+            <h3 className = {styles.name} >{props.name}</h3>
+            <p className = {styles.comment} >{props.text}</p>
+            <span className = {styles.date} >Updated: {dateToString(updatedTo)}</span>
         </li>
 
     )
