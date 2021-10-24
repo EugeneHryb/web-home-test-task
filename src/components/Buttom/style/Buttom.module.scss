@@ -1,0 +1,23 @@
+@import '../../../config/config';
+
+.wrapper{
+    padding: 5px;
+}
+
+.buttom{
+    background-color: $button-color;
+    text-decoration: none;
+    color: $button-content-color; 
+    box-shadow: 0px 0px 50px -18px $button-shadow-color;
+    border: none;
+    outline: none;
+    text-transform: uppercase;
+    font-size: 18px;
+    padding: 10px;
+    transition: scale .5s;
+
+    &:hover{
+        scale: 1.1;
+    }
+
+}

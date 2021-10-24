@@ -35,10 +35,10 @@ function CommentForm(props){
 
             if(comment.name.length<3){
                 setValidateMessage({...validateMessage, name: true});
-                setTimeout(hideNameValidate, 4000)
+                setTimeout(hideNameValidate, 10000)
             }else if(comment.text.length<3){
                 setValidateMessage({...validateMessage, text: true});
-                setTimeout(hideTextValidate, 4000)
+                setTimeout(hideTextValidate, 10000)
             }else{
                 const response = await fetch(API.sendComments, {
                     method: 'post',
@@ -76,8 +76,8 @@ function CommentForm(props){
         />
 
     return(
-        <form onSubmit = {formHangler}>
-            <div className={styles.wrapper}>
+        <form onSubmit = {formHangler} className={styles.wrapper}>
+            <div className={styles['input-wraper']}>
                 <input
                     type='text'
                     name='yourName'
@@ -85,9 +85,9 @@ function CommentForm(props){
                     onChange = {(e)=>setComment({...comment, name: e.target.value})}
                     value = {comment.name}
                 />
-                {(validateMessage.name)?<span>There must be at least two letters.</span>:''}
+                {(validateMessage.name)?<span className = {styles.warning} >There must be at least two letters.</span>:''}
             </div>
-            <div className = {styles.wrapper}>
+            <div className = {styles['input-wraper']}>
                 <textarea
                     type='text'
                     name='comment'
@@ -96,7 +96,7 @@ function CommentForm(props){
                     value = {comment.text}
                 >
                 </textarea>
-                {(validateMessage.text)?<span>There must be at least four letters.</span>:''}
+                {(validateMessage.text)?<span className = {styles.warning} >There must be at least four letters.</span>:''}
             </div>
             
             <Buttom buttomTypes = {'submit'} buttomOnclick = {formHangler} content={'Submit'}/>

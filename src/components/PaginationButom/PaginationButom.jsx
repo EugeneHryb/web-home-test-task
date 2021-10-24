@@ -13,7 +13,7 @@ function PaginationButom(props){
     }
 
     return (
-        <li className={styles.wraper}>
+        <li className={styles.wraper +' ' + ((props.active) ? styles.active : '')} >
             <a href="" 
                 className={styles.button}
                 onClick = {goToPage} 

@@ -10,6 +10,10 @@
     display: flex;
     justify-content: center;
     text-align: center;
+
+    &:first-child, &:last-child{
+        width: 200px;
+    }
 }
 
 .more{
